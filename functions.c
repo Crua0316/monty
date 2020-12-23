@@ -7,7 +7,7 @@
 void free_malloc(stack_t *head)
 {
 	stack_t *lista = head;
-	
+
 	if (head == NULL)
 	{
 		return;
@@ -35,7 +35,7 @@ void functions_monty(stack_t **stack, char *command_f, unsigned int line_numb)
 		{"mul", mul}, {"mod", mod}, {NULL, NULL}};
 	unsigned int i = 0;
 	int checker = 0;
-	
+
 	while (i < 11 && command_f != NULL)
 	{
 		if (command_f[0] == '#')
