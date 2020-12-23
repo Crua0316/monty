@@ -9,8 +9,9 @@ char *lines_check(char *buffer, unsigned int line_number)
 {
 	char *token = NULL, *num_t = NULL;
 	long int i = 0;
+
 	token = strtok(buffer, " \t\n");
-	
+
 	if (strcmp(token, "push") == 0)
 	{
 		num_t = strtok(NULL, " \t\n");
@@ -50,7 +51,7 @@ int main(int argc, char *argv[])
 	char *buffer = NULL, *command_f = NULL;
 	size_t size = 0;
 	unsigned int line_number = 0;
-	
+
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -60,7 +61,8 @@ int main(int argc, char *argv[])
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		exit(EXIT_FAILURE);}
+		exit(EXIT_FAILURE);
+	}
 	while (getline(&buffer, &size, file) != EOF)
 	{
 		line_number++;
